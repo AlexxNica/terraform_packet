@@ -1,0 +1,30 @@
+{
+
+  "provider": {
+    "packet": {
+      "auth_token": "${var.auth_token}"
+    }
+  },
+
+  "resource": {
+    "packet_project": {
+      "tf_machines": {
+        "name": "${var.project_name}"
+      }
+    },
+
+    "packet_device": {
+      "tf_1": {
+        "hostname": "${var.hostname}",
+        "plan": "${var.plan}",
+        "facility": "${var.facility}",
+        "operating_system": "${var.operating_system}",
+        "billing_cycle": "${var.billing_cycle}",
+        "project_id": "${packet_project.tf_machines.id}",
+        "spot_instance": "${var.spot_price_max > 0.0 ? true : false}",
+        "spot_price_max": "${var.spot_price_max}"
+      }
+    }
+  }
+
+}

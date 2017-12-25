@@ -1,0 +1,44 @@
+{
+
+  "variable": {
+    "auth_token": {
+      "description": "Packet API Key"
+    },
+
+    "facility": {
+      "description": "Packet Facility (ewr1, sjc1, ams1)",
+      "default": "sjc1"
+    },
+
+    "plan": {
+      "description": "Instance Type of Agent (baremetal_{0,5})",
+      "default": "baremetal_0"
+    },
+
+    "spot_price_max": {
+      "description": "Maximum Price for the Spot Market Bid (0.01+)",
+      "default": 0.01
+    },
+
+    "project_name": {
+      "description": "Project Name",
+      "default": "Terraform Machines"
+    },
+
+    "hostname": {
+      "description": "Hostname Prefix",
+      "default": "tf.coreos1"
+    },
+
+    "operating_system": {
+      "description": "Operating System",
+      "default": "nixos_17_03"
+    },
+
+    "billing_cycle": {
+      "description": "Billing Cycle",
+      "default": "hourly"
+    }
+  }
+
+}

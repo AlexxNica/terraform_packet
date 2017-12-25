@@ -16,6 +16,6 @@ resource "packet_device" "tf_1" {
   operating_system = "coreos_alpha"
   billing_cycle    = "hourly"
   project_id       = "${packet_project.tf_machines.id}"
-  spot_instance    = true
-  spot_price_max   = 0.01
+  spot_instance    = "${self.spot_price_max > 0.0 ? true : false}"
+  spot_price_max   = "${var.spot_price_max}"
 }

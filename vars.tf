@@ -11,3 +11,13 @@ variable "plan" {
   description = "Instance Type of Agent"
   default = "baremetal_0"
 }
+
+variable "spot_price_max" {
+  description = "Maximum price for the spot market bid"
+  default = 0.01
+}
+
+variable "coreos_hostname" {
+  description = "Maximum price for the spot market bid"
+  default = 0.01
+}
